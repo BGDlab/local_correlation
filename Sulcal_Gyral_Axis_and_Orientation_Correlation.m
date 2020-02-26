@@ -1,17 +1,15 @@
 % Code by Aaron Alexander-Bloch, Simon Vandekar and Zhixin Lu
 % Alexander-Bloch et al, "Imaging local genetic influences on cortical folding", PNAS, 2020
-% rhsulcdepth.csv contains average sulcal depth in fsaverage5 space
-% rh.sphere is fsaverage5 spherical surface
-% corrfile.csv is a csv file with 4 columns in order from left to right
+% Calculates the local correlation orientation for all vertices on the fsaverage5 surface
+% requires file rhsulcdepth.csv which contains average sulcal depth in fsaverage5 space
+% requires rh.sphere which is FreeSurfer spherical surface in fsaverage5
+% requires corrfile.csv which is a csv file with the following 4 columns in order from left to right
 % 1) index of vertex 1 in fsaverage5
 % 2) index of vertex 2 in fsaverage5
 % 3) geodesic distance between vertex 1 and vertex 2, calculated on mid-gray surface
 % 4) residual of structural covariance between vertex 1 and vertex 2 after regressing out non-linear distance effect
-% Note that corrfile includes all and only the pairs of vertices within a 10-mm geodesic
-% after exluding noncortical vertices along medial wall: ~27,500 vertices
-% Note that according to usage agreements data cannot be shared directly
-% please refer to paper for methodological steps to generate corrfile.csv
-% depends on Spherical_angles.m available at 
+% Please refer to the paper for methodological steps to generate this such a file with your own data
+% This script depends on the function Spherical_angles.m available at 
 
 format long 
 
