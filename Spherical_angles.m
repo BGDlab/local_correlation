@@ -2,7 +2,7 @@ function [angABC,arcABC, isrealABC] = Spherical_angles(ptA,ptB,ptC)
 %This function calculate the angles and edge length of a tringle on the
 %unit sphere, assuming that hte center of the sphere is (0,0,0). Results
 %are in the unit of radus. 
-%code by Zhixin Lu
+%code by Zhixin Lu, 2019
 
 
 % normalize the three verticies so that they lie on the unit sphere.
